@@ -1,0 +1,293 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="TPL Studios — Websites That Work for Your Business"
+  description="UK-based web design agency building fast, modern websites for small businesses at prices that make sense. Get a free quote today."
+>
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <!-- Animated Background Canvas -->
+    <canvas id="hero-canvas" class="absolute inset-0 w-full h-full" aria-hidden="true"></canvas>
+
+    <!-- Gradient overlay -->
+    <div class="absolute inset-0 bg-gradient-to-b from-bg-primary/40 via-transparent to-bg-primary" aria-hidden="true"></div>
+
+    <div class="container relative z-10 text-center py-20">
+      <h1 class="reveal mb-6 max-w-4xl mx-auto">
+        Websites that actually
+        <span class="text-accent-primary">work</span>
+        for your business.
+      </h1>
+      <p class="reveal text-txt-secondary text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+        We build fast, modern websites for UK small businesses — at prices that make sense.
+      </p>
+      <div class="reveal flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact" class="btn-primary text-lg px-8 py-4">Get a Free Quote</a>
+        <a href="/portfolio" class="btn-secondary text-lg px-8 py-4">See Our Work</a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce" aria-hidden="true">
+      <svg class="w-6 h-6 text-txt-tertiary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- Trust Strip -->
+  <section class="border-y border-border bg-bg-secondary">
+    <div class="container py-8">
+      <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 text-center">
+        <div class="reveal">
+          <span class="block font-heading font-bold text-2xl text-accent-primary">10+</span>
+          <span class="text-txt-secondary text-sm">Sites Launched</span>
+        </div>
+        <div class="hidden md:block w-px h-8 bg-border" aria-hidden="true"></div>
+        <div class="reveal">
+          <span class="block font-heading font-bold text-2xl text-accent-primary">5-Star</span>
+          <span class="text-txt-secondary text-sm">Client Reviews</span>
+        </div>
+        <div class="hidden md:block w-px h-8 bg-border" aria-hidden="true"></div>
+        <div class="reveal">
+          <span class="block font-heading font-bold text-2xl text-accent-primary">UK</span>
+          <span class="text-txt-secondary text-sm">Based Studio</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Snapshot -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="text-center mb-16">
+        <h2 class="reveal mb-4">Simple, honest <span class="text-accent-primary">pricing</span></h2>
+        <p class="reveal text-txt-secondary text-lg max-w-xl mx-auto">
+          No hidden fees. Pick a plan that fits your business and budget.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 stagger">
+        <!-- Starter -->
+        <div class="card reveal text-center">
+          <h3 class="text-accent-secondary mb-2">Starter</h3>
+          <p class="font-heading font-bold text-4xl text-txt-primary mb-1">£299</p>
+          <p class="text-txt-tertiary text-sm mb-6">One-off payment</p>
+          <ul class="text-left space-y-3 mb-8 text-txt-secondary text-sm">
+            <li class="flex gap-2"><span class="text-accent-primary" aria-hidden="true">&#10003;</span> Single-page website</li>
+            <li class="flex gap-2"><span class="text-accent-primary" aria-hidden="true">&#10003;</span> Mobile responsive</li>
+            <li class="flex gap-2"><span class="text-accent-primary" aria-hidden="true">&#10003;</span> Contact form</li>
+            <li class="flex gap-2"><span class="text-accent-primary" aria-hidden="true">&#10003;</span> 2 rounds of revisions</li>
+          </ul>
+          <a href="/services" class="btn-secondary w-full">Learn More</a>
+        </div>
+
+        <!-- Growth (featured) -->
+        <div class="card reveal text-center border-accent-primary relative">
+          <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent-primary text-white text-xs font-heading font-semibold px-3 py-1 rounded-full">
+            Most Popular
+          </span>
+          <h3 class="text-accent-primary mb-2">Growth</h3>
+          <p class="font-heading font-bold text-4xl text-txt-primary mb-1">£499</p>
+          <p class="text-txt-tertiary text-sm mb-6">One-off payment</p>
+          <ul class="text-left space-y-3 mb-8 text-txt-secondary text-sm">
+            <li class="flex gap-2"><span class="text-accent-primary" aria-hidden="true">&#10003;</span> Multi-page website (up to 5)</li>
+            <li class="flex gap-2"><span class="text-accent-primary" aria-hidden="true">&#10003;</span> Custom design</li>
+            <li class="flex gap-2"><span class="text-accent-primary" aria-hidden="true">&#10003;</span> SEO optimised</li>
+            <li class="flex gap-2"><span class="text-accent-primary" aria-hidden="true">&#10003;</span> 3 rounds of revisions</li>
+          </ul>
+          <a href="/services" class="btn-primary w-full">Learn More</a>
+        </div>
+
+        <!-- Premium -->
+        <div class="card reveal text-center">
+          <h3 class="text-accent-secondary mb-2">Premium</h3>
+          <p class="font-heading font-bold text-4xl text-txt-primary mb-1">£749</p>
+          <p class="text-txt-tertiary text-sm mb-6">One-off payment</p>
+          <ul class="text-left space-y-3 mb-8 text-txt-secondary text-sm">
+            <li class="flex gap-2"><span class="text-accent-primary" aria-hidden="true">&#10003;</span> Unlimited pages</li>
+            <li class="flex gap-2"><span class="text-accent-primary" aria-hidden="true">&#10003;</span> Advanced animations</li>
+            <li class="flex gap-2"><span class="text-accent-primary" aria-hidden="true">&#10003;</span> Priority support</li>
+            <li class="flex gap-2"><span class="text-accent-primary" aria-hidden="true">&#10003;</span> Unlimited revisions</li>
+          </ul>
+          <a href="/services" class="btn-secondary w-full">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Preview -->
+  <section class="section-padding bg-bg-secondary">
+    <div class="container">
+      <div class="text-center mb-16">
+        <h2 class="reveal mb-4">Our <span class="text-accent-primary">work</span></h2>
+        <p class="reveal text-txt-secondary text-lg max-w-xl mx-auto">
+          Real websites we've built for real businesses.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 stagger">
+        <div class="card reveal overflow-hidden group">
+          <div class="aspect-video bg-surface rounded mb-4 flex items-center justify-center">
+            <span class="text-txt-tertiary text-sm font-mono">Project Screenshot</span>
+          </div>
+          <h3 class="text-lg mb-1">The Local Barber</h3>
+          <p class="text-txt-secondary text-sm">Modern booking site for a high-street barbershop.</p>
+        </div>
+        <div class="card reveal overflow-hidden group">
+          <div class="aspect-video bg-surface rounded mb-4 flex items-center justify-center">
+            <span class="text-txt-tertiary text-sm font-mono">Project Screenshot</span>
+          </div>
+          <h3 class="text-lg mb-1">GreenLeaf Landscaping</h3>
+          <p class="text-txt-secondary text-sm">Portfolio site showcasing garden transformations.</p>
+        </div>
+        <div class="card reveal overflow-hidden group">
+          <div class="aspect-video bg-surface rounded mb-4 flex items-center justify-center">
+            <span class="text-txt-tertiary text-sm font-mono">Project Screenshot</span>
+          </div>
+          <h3 class="text-lg mb-1">Peak Fitness PT</h3>
+          <p class="text-txt-secondary text-sm">Landing page with class schedules and enquiry form.</p>
+        </div>
+      </div>
+      <div class="text-center mt-10 reveal">
+        <a href="/portfolio" class="btn-secondary">View All Projects</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Teaser -->
+  <section class="section-padding">
+    <div class="container text-center">
+      <h2 class="reveal mb-4">How we <span class="text-accent-primary">work</span></h2>
+      <p class="reveal text-txt-secondary text-lg max-w-xl mx-auto mb-12">
+        From first chat to live site — six simple steps.
+      </p>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 stagger mb-10">
+        {[
+          { num: '01', title: 'Discovery Call' },
+          { num: '02', title: 'Custom Quote' },
+          { num: '03', title: '25% Deposit' },
+          { num: '04', title: 'We Build' },
+          { num: '05', title: 'Review' },
+          { num: '06', title: 'Launch' },
+        ].map((step) => (
+          <div class="reveal text-center">
+            <span class="block font-heading font-bold text-3xl text-accent-primary mb-2">{step.num}</span>
+            <span class="text-txt-secondary text-sm">{step.title}</span>
+          </div>
+        ))}
+      </div>
+      <div class="reveal">
+        <a href="/process" class="btn-secondary">See How We Work</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="section-padding bg-gradient-to-br from-accent-primary/10 via-bg-secondary to-accent-secondary/10">
+    <div class="container text-center">
+      <h2 class="reveal mb-4">Ready to get <span class="text-accent-primary">started</span>?</h2>
+      <p class="reveal text-txt-secondary text-lg max-w-lg mx-auto mb-8">
+        Tell us about your project and we'll get back to you within 24 hours.
+      </p>
+      <div class="reveal">
+        <a href="/contact" class="btn-primary text-lg px-8 py-4">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hero Canvas Script -->
+  <script>
+    function initHeroCanvas() {
+      const canvas = document.getElementById('hero-canvas') as HTMLCanvasElement | null;
+      if (!canvas) return;
+
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (prefersReducedMotion) return;
+
+      const ctx = canvas.getContext('2d');
+      if (!ctx) return;
+
+      let animationId: number;
+      let particles: Array<{
+        x: number; y: number; vx: number; vy: number; size: number; opacity: number; color: string;
+      }> = [];
+
+      function resize() {
+        canvas!.width = window.innerWidth;
+        canvas!.height = window.innerHeight;
+      }
+
+      function createParticles() {
+        const count = Math.min(60, Math.floor(window.innerWidth / 20));
+        particles = [];
+        for (let i = 0; i < count; i++) {
+          particles.push({
+            x: Math.random() * canvas!.width,
+            y: Math.random() * canvas!.height,
+            vx: (Math.random() - 0.5) * 0.3,
+            vy: (Math.random() - 0.5) * 0.3,
+            size: Math.random() * 2 + 0.5,
+            opacity: Math.random() * 0.4 + 0.1,
+            color: Math.random() > 0.5 ? '139, 92, 246' : '6, 182, 212',
+          });
+        }
+      }
+
+      function draw() {
+        ctx!.clearRect(0, 0, canvas!.width, canvas!.height);
+
+        for (const p of particles) {
+          p.x += p.vx;
+          p.y += p.vy;
+
+          if (p.x < 0) p.x = canvas!.width;
+          if (p.x > canvas!.width) p.x = 0;
+          if (p.y < 0) p.y = canvas!.height;
+          if (p.y > canvas!.height) p.y = 0;
+
+          ctx!.beginPath();
+          ctx!.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+          ctx!.fillStyle = `rgba(${p.color}, ${p.opacity})`;
+          ctx!.fill();
+        }
+
+        // Draw connections
+        for (let i = 0; i < particles.length; i++) {
+          for (let j = i + 1; j < particles.length; j++) {
+            const dx = particles[i].x - particles[j].x;
+            const dy = particles[i].y - particles[j].y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < 150) {
+              ctx!.beginPath();
+              ctx!.moveTo(particles[i].x, particles[i].y);
+              ctx!.lineTo(particles[j].x, particles[j].y);
+              ctx!.strokeStyle = `rgba(139, 92, 246, ${0.06 * (1 - dist / 150)})`;
+              ctx!.lineWidth = 0.5;
+              ctx!.stroke();
+            }
+          }
+        }
+
+        animationId = requestAnimationFrame(draw);
+      }
+
+      resize();
+      createParticles();
+      draw();
+
+      window.addEventListener('resize', () => {
+        resize();
+        createParticles();
+      });
+
+      // Cleanup on page navigation
+      document.addEventListener('astro:before-preparation', () => {
+        cancelAnimationFrame(animationId);
+      }, { once: true });
+    }
+
+    document.addEventListener('astro:page-load', initHeroCanvas);
+    initHeroCanvas();
+  </script>
+</BaseLayout>

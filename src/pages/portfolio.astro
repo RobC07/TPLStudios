@@ -1,0 +1,88 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const projects = [
+  {
+    name: 'The Local Barber',
+    description: 'A modern booking and showcase site for a popular high-street barbershop. Clean design with online appointment scheduling.',
+    tags: ['Web Design', 'Booking Integration'],
+  },
+  {
+    name: 'GreenLeaf Landscaping',
+    description: 'Portfolio website showcasing stunning garden transformations with before/after galleries and enquiry form.',
+    tags: ['Web Design', 'Portfolio'],
+  },
+  {
+    name: 'Peak Fitness PT',
+    description: 'High-energy landing page with class schedules, trainer profiles, and a lead-capture enquiry form.',
+    tags: ['Web Design', 'Landing Page'],
+  },
+  {
+    name: 'Bright Smiles Dental',
+    description: 'Professional multi-page site for a local dental clinic featuring service listings and patient testimonials.',
+    tags: ['Web Design', 'Branding', 'Hosting'],
+  },
+  {
+    name: 'Home & Hearth Interiors',
+    description: 'Elegant portfolio site for an interior design studio with project galleries and consultation booking.',
+    tags: ['Web Design', 'Portfolio'],
+  },
+  {
+    name: 'QuickFix Plumbing',
+    description: 'Fast, mobile-first single-page site with click-to-call, service area map, and emergency contact form.',
+    tags: ['Web Design', 'Landing Page', 'Hosting'],
+  },
+];
+---
+
+<BaseLayout
+  title="Portfolio — TPL Studios"
+  description="See real websites we've built for UK small businesses. From barbershops to dental clinics, our work speaks for itself."
+>
+  <!-- Page Header -->
+  <section class="section-padding pt-32 md:pt-40">
+    <div class="container text-center">
+      <h1 class="reveal mb-4">Our <span class="text-accent-primary">Work</span></h1>
+      <p class="reveal text-txt-secondary text-lg md:text-xl max-w-2xl mx-auto">
+        Real results for real businesses.
+      </p>
+    </div>
+  </section>
+
+  <!-- Project Grid -->
+  <section class="section-padding pt-8">
+    <div class="container">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 stagger">
+        {projects.map((project) => (
+          <article class="card reveal overflow-hidden group">
+            <!-- Placeholder image -->
+            <div class="aspect-video bg-surface rounded-card mb-6 flex items-center justify-center overflow-hidden relative">
+              <div class="absolute inset-0 bg-gradient-to-br from-accent-primary/5 to-accent-secondary/5"></div>
+              <span class="text-txt-tertiary text-sm font-mono relative z-10">Project Screenshot</span>
+            </div>
+            <h3 class="text-xl mb-2 group-hover:text-accent-primary transition-colors duration-200">{project.name}</h3>
+            <p class="text-txt-secondary text-sm mb-4 leading-relaxed">{project.description}</p>
+            <div class="flex flex-wrap gap-2">
+              {project.tags.map((tag) => (
+                <span class="text-xs font-mono px-2 py-1 bg-surface rounded text-accent-secondary">{tag}</span>
+              ))}
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-padding bg-gradient-to-br from-accent-primary/10 via-bg-secondary to-accent-secondary/10">
+    <div class="container text-center">
+      <h2 class="reveal mb-4">Want results like <span class="text-accent-primary">these</span>?</h2>
+      <p class="reveal text-txt-secondary text-lg max-w-lg mx-auto mb-8">
+        Let's build something great for your business.
+      </p>
+      <div class="reveal">
+        <a href="/contact" class="btn-primary text-lg px-8 py-4">Start Your Project</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

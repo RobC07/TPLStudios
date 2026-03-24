@@ -1,0 +1,103 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const steps = [
+  {
+    num: '01',
+    title: 'Discovery Call',
+    description: 'Book a free call so we can understand your business, goals, and what you need from your website.',
+    icon: '📞',
+  },
+  {
+    num: '02',
+    title: 'Custom Quote',
+    description: "We'll put together a clear, detailed quote tailored to your project — no cookie-cutter pricing.",
+    icon: '📋',
+  },
+  {
+    num: '03',
+    title: '25% Deposit',
+    description: "Once you're happy with the quote, pay a 25% deposit to kick things off.",
+    icon: '💳',
+  },
+  {
+    num: '04',
+    title: 'We Build Your Site',
+    description: 'Our team designs and develops your site, keeping you updated throughout the process.',
+    icon: '🔨',
+  },
+  {
+    num: '05',
+    title: 'Review & Feedback',
+    description: "We present the finished site for your review. You get revisions to make sure it's exactly right.",
+    icon: '🔍',
+  },
+  {
+    num: '06',
+    title: 'Launch & Hosting',
+    description: 'Pay the remaining balance, we launch your site, and set you up on a monthly hosting & maintenance plan.',
+    icon: '🚀',
+  },
+];
+---
+
+<BaseLayout
+  title="Our Process — TPL Studios"
+  description="From first chat to live site — here's exactly how working with TPL Studios works, step by step."
+>
+  <!-- Page Header -->
+  <section class="section-padding pt-32 md:pt-40">
+    <div class="container text-center">
+      <h1 class="reveal mb-4">How We <span class="text-accent-primary">Work</span></h1>
+      <p class="reveal text-txt-secondary text-lg md:text-xl max-w-2xl mx-auto">
+        From first chat to live site — here's what to expect.
+      </p>
+    </div>
+  </section>
+
+  <!-- Process Timeline -->
+  <section class="section-padding pt-8">
+    <div class="container max-w-4xl">
+      <div class="relative">
+        <!-- Vertical line -->
+        <div class="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-border md:-translate-x-px" aria-hidden="true"></div>
+
+        <div class="space-y-12 md:space-y-16">
+          {steps.map((step, i) => (
+            <div class={`reveal relative flex flex-col md:flex-row items-start gap-6 md:gap-12 ${i % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
+              <!-- Step number dot -->
+              <div class="absolute left-6 md:left-1/2 w-3 h-3 bg-accent-primary rounded-full -translate-x-1/2 mt-2 z-10 ring-4 ring-bg-primary" aria-hidden="true"></div>
+
+              <!-- Spacer for alignment (mobile: indent, desktop: half width) -->
+              <div class="hidden md:block md:w-1/2"></div>
+
+              <!-- Content -->
+              <div class="ml-14 md:ml-0 md:w-1/2">
+                <div class="card p-6">
+                  <div class="flex items-center gap-3 mb-3">
+                    <span class="font-heading font-bold text-2xl text-accent-primary">{step.num}</span>
+                    <h3 class="text-lg">{step.title}</h3>
+                  </div>
+                  <p class="text-txt-secondary text-sm leading-relaxed">{step.description}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-padding bg-gradient-to-br from-accent-primary/10 via-bg-secondary to-accent-secondary/10">
+    <div class="container text-center">
+      <h2 class="reveal mb-4">Ready to <span class="text-accent-primary">start</span>?</h2>
+      <p class="reveal text-txt-secondary text-lg max-w-lg mx-auto mb-8">
+        Step one is easy — just get in touch and we'll take it from there.
+      </p>
+      <div class="reveal">
+        <a href="/contact" class="btn-primary text-lg px-8 py-4">Book Your Free Call</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
