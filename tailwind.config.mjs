@@ -5,23 +5,23 @@ export default {
     extend: {
       colors: {
         bg: {
-          primary: '#0A0A0A',
-          secondary: '#141414',
+          primary: '#FAFAF6',
+          secondary: '#F0EDE5',
         },
-        surface: '#1E1E1E',
+        surface: '#E6E2D9',
         accent: {
-          primary: '#8B5CF6',
-          'primary-hover': '#A78BFA',
-          secondary: '#06B6D4',
+          primary: '#2D7A6E',
+          'primary-hover': '#1F5F55',
+          secondary: '#D18B3A',
         },
         txt: {
-          primary: '#F5F5F5',
-          secondary: '#A3A3A3',
-          tertiary: '#6B6B6B',
+          primary: '#2A2723',
+          secondary: '#6B6660',
+          tertiary: '#9A958E',
         },
-        success: '#22C55E',
-        error: '#EF4444',
-        border: '#2A2A2A',
+        success: '#3A8F5C',
+        error: '#C94040',
+        border: '#DDD8CF',
       },
       fontFamily: {
         heading: ['"Space Grotesk"', 'sans-serif'],

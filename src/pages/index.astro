@@ -37,28 +37,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- Trust Strip -->
-  <section class="border-y border-border bg-bg-secondary">
-    <div class="container py-8">
-      <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 text-center">
-        <div class="reveal">
-          <span class="block font-heading font-bold text-2xl text-accent-primary">10+</span>
-          <span class="text-txt-secondary text-sm">Sites Launched</span>
-        </div>
-        <div class="hidden md:block w-px h-8 bg-border" aria-hidden="true"></div>
-        <div class="reveal">
-          <span class="block font-heading font-bold text-2xl text-accent-primary">5-Star</span>
-          <span class="text-txt-secondary text-sm">Client Reviews</span>
-        </div>
-        <div class="hidden md:block w-px h-8 bg-border" aria-hidden="true"></div>
-        <div class="reveal">
-          <span class="block font-heading font-bold text-2xl text-accent-primary">UK</span>
-          <span class="text-txt-secondary text-sm">Based Studio</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Services Snapshot -->
   <section class="section-padding">
     <div class="container">
@@ -92,7 +70,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <p class="font-heading font-bold text-4xl text-txt-primary mb-1">£499</p>
           <p class="text-txt-tertiary text-sm mb-6">One-off payment</p>
           <ul class="text-left space-y-3 mb-8 text-txt-secondary text-sm">
-            <li class="flex gap-2"><span class="text-accent-primary" aria-hidden="true">&#10003;</span> Multi-page website (up to 5)</li>
+            <li class="flex gap-2"><span class="text-accent-primary" aria-hidden="true">&#10003;</span> Multi-page website (up to 4)</li>
             <li class="flex gap-2"><span class="text-accent-primary" aria-hidden="true">&#10003;</span> Custom design</li>
             <li class="flex gap-2"><span class="text-accent-primary" aria-hidden="true">&#10003;</span> SEO optimised</li>
             <li class="flex gap-2"><span class="text-accent-primary" aria-hidden="true">&#10003;</span> 3 rounds of revisions</li>
@@ -228,8 +206,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             vx: (Math.random() - 0.5) * 0.3,
             vy: (Math.random() - 0.5) * 0.3,
             size: Math.random() * 2 + 0.5,
-            opacity: Math.random() * 0.4 + 0.1,
-            color: Math.random() > 0.5 ? '139, 92, 246' : '6, 182, 212',
+            opacity: Math.random() * 0.3 + 0.05,
+            color: Math.random() > 0.5 ? '45, 122, 110' : '209, 139, 58',
           });
         }
       }
@@ -262,7 +240,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               ctx!.beginPath();
               ctx!.moveTo(particles[i].x, particles[i].y);
               ctx!.lineTo(particles[j].x, particles[j].y);
-              ctx!.strokeStyle = `rgba(139, 92, 246, ${0.06 * (1 - dist / 150)})`;
+              ctx!.strokeStyle = `rgba(45, 122, 110, ${0.06 * (1 - dist / 150)})`;
               ctx!.lineWidth = 0.5;
               ctx!.stroke();
             }

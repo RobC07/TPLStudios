@@ -34,8 +34,8 @@
   }
 
   ::selection {
-    background-color: rgba(139, 92, 246, 0.3);
-    color: #F5F5F5;
+    background-color: rgba(45, 122, 110, 0.25);
+    color: #2A2723;
   }
 
   /* Focus indicators for accessibility */
