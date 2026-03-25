@@ -11,83 +11,104 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <!-- Animated Background Canvas -->
     <canvas id="hero-canvas" class="absolute inset-0 w-full h-full" aria-hidden="true"></canvas>
 
+    <!-- Floating orbs -->
+    <div class="orb w-[600px] h-[600px] -top-64 -right-64 bg-accent-primary/10 animate-float" aria-hidden="true"></div>
+    <div class="orb w-[400px] h-[400px] -bottom-32 -left-32 bg-accent-secondary/10 animate-float-slow" aria-hidden="true"></div>
+    <div class="orb w-[300px] h-[300px] top-1/3 left-1/4 bg-accent-tertiary/5 animate-float-slower" aria-hidden="true"></div>
+
     <!-- Gradient overlay -->
-    <div class="absolute inset-0 bg-gradient-to-b from-bg-primary/40 via-transparent to-bg-primary" aria-hidden="true"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-bg-primary/60 via-transparent to-bg-primary" aria-hidden="true"></div>
+
+    <!-- Dot pattern overlay -->
+    <div class="absolute inset-0 dot-pattern opacity-30" aria-hidden="true"></div>
 
     <div class="container relative z-10 text-center py-20">
-      <h1 class="reveal mb-6 max-w-4xl mx-auto">
-        Websites that actually
-        <span class="text-accent-primary">work</span>
-        for your business.
+      <div class="reveal mb-4">
+        <span class="inline-block px-4 py-1.5 text-xs font-mono tracking-wider text-accent-primary border border-accent-primary/30 rounded-full bg-accent-primary/5 mb-8">
+          WEB DESIGN &amp; DEVELOPMENT
+        </span>
+      </div>
+      <h1 class="reveal mb-6 max-w-5xl mx-auto">
+        We build websites that
+        <span class="gradient-text">actually work</span>
+        for your business
       </h1>
-      <p class="reveal text-txt-secondary text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-        We build fast, modern websites for UK small businesses — at prices that make sense.
+      <p class="reveal text-txt-secondary text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
+        Fast, modern websites for UK small businesses — at prices that make sense.
+        No jargon. No surprises. Just results.
       </p>
       <div class="reveal flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/contact" class="btn-primary text-lg px-8 py-4">Get a Free Quote</a>
+        <a href="/contact" class="btn-primary text-lg px-8 py-4"><span>Get a Free Quote</span></a>
         <a href="/portfolio" class="btn-secondary text-lg px-8 py-4">See Our Work</a>
       </div>
     </div>
 
     <!-- Scroll indicator -->
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce" aria-hidden="true">
-      <svg class="w-6 h-6 text-txt-tertiary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-      </svg>
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10" aria-hidden="true">
+      <div class="w-6 h-10 border-2 border-txt-tertiary/30 rounded-full flex justify-center pt-2">
+        <div class="w-1 h-2.5 bg-accent-primary rounded-full animate-bounce"></div>
+      </div>
     </div>
   </section>
 
+  <!-- Glow divider -->
+  <div class="glow-line" aria-hidden="true"></div>
+
   <!-- Services Snapshot -->
-  <section class="section-padding">
-    <div class="container">
-      <div class="text-center mb-16">
-        <h2 class="reveal mb-4">Simple, honest <span class="text-accent-primary">pricing</span></h2>
+  <section class="section-padding relative overflow-hidden">
+    <div class="orb w-[500px] h-[500px] -right-64 top-0 bg-accent-primary/5 animate-pulse-glow" aria-hidden="true"></div>
+    <div class="container relative z-10">
+      <div class="text-center mb-20">
+        <span class="reveal inline-block px-4 py-1.5 text-xs font-mono tracking-wider text-accent-secondary border border-accent-secondary/30 rounded-full bg-accent-secondary/5 mb-6">
+          PRICING
+        </span>
+        <h2 class="reveal mb-4">Simple, honest <span class="gradient-text-subtle">pricing</span></h2>
         <p class="reveal text-txt-secondary text-lg max-w-xl mx-auto">
           No hidden fees. Pick a plan that fits your business and budget.
         </p>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 stagger">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 stagger">
         <!-- Starter -->
-        <div class="card reveal text-center">
+        <div class="card reveal text-center p-8">
           <h3 class="text-accent-secondary mb-2">Starter</h3>
-          <p class="font-heading font-bold text-4xl text-txt-primary mb-1">£299</p>
-          <p class="text-txt-tertiary text-sm mb-6">One-off payment</p>
+          <p class="font-heading font-bold text-5xl text-txt-primary mb-1">£299</p>
+          <p class="text-txt-tertiary text-sm mb-8">One-off payment</p>
           <ul class="text-left space-y-3 mb-8 text-txt-secondary text-sm">
-            <li class="flex gap-2"><span class="text-accent-primary" aria-hidden="true">&#10003;</span> Single-page website</li>
-            <li class="flex gap-2"><span class="text-accent-primary" aria-hidden="true">&#10003;</span> Mobile responsive</li>
-            <li class="flex gap-2"><span class="text-accent-primary" aria-hidden="true">&#10003;</span> Contact form</li>
-            <li class="flex gap-2"><span class="text-accent-primary" aria-hidden="true">&#10003;</span> 2 rounds of revisions</li>
+            <li class="flex gap-3"><span class="text-accent-primary" aria-hidden="true">&#10003;</span> Single-page website</li>
+            <li class="flex gap-3"><span class="text-accent-primary" aria-hidden="true">&#10003;</span> Mobile responsive</li>
+            <li class="flex gap-3"><span class="text-accent-primary" aria-hidden="true">&#10003;</span> Contact form</li>
+            <li class="flex gap-3"><span class="text-accent-primary" aria-hidden="true">&#10003;</span> 2 rounds of revisions</li>
           </ul>
           <a href="/services" class="btn-secondary w-full">Learn More</a>
         </div>
 
         <!-- Growth (featured) -->
-        <div class="card reveal text-center border-accent-primary relative">
-          <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent-primary text-white text-xs font-heading font-semibold px-3 py-1 rounded-full">
+        <div class="card-featured reveal text-center p-8 relative">
+          <span class="absolute -top-3 left-1/2 -translate-x-1/2 z-10 text-xs font-heading font-semibold px-4 py-1 rounded-full text-white" style="background: linear-gradient(135deg, #7C3AED, #06B6D4);">
             Most Popular
           </span>
-          <h3 class="text-accent-primary mb-2">Growth</h3>
-          <p class="font-heading font-bold text-4xl text-txt-primary mb-1">£499</p>
-          <p class="text-txt-tertiary text-sm mb-6">One-off payment</p>
+          <h3 class="gradient-text-subtle mb-2">Growth</h3>
+          <p class="font-heading font-bold text-5xl text-txt-primary mb-1">£499</p>
+          <p class="text-txt-tertiary text-sm mb-8">One-off payment</p>
           <ul class="text-left space-y-3 mb-8 text-txt-secondary text-sm">
-            <li class="flex gap-2"><span class="text-accent-primary" aria-hidden="true">&#10003;</span> Multi-page website (up to 4)</li>
-            <li class="flex gap-2"><span class="text-accent-primary" aria-hidden="true">&#10003;</span> Custom design</li>
-            <li class="flex gap-2"><span class="text-accent-primary" aria-hidden="true">&#10003;</span> SEO optimised</li>
-            <li class="flex gap-2"><span class="text-accent-primary" aria-hidden="true">&#10003;</span> 3 rounds of revisions</li>
+            <li class="flex gap-3"><span class="text-accent-primary" aria-hidden="true">&#10003;</span> Multi-page website (up to 4)</li>
+            <li class="flex gap-3"><span class="text-accent-primary" aria-hidden="true">&#10003;</span> Custom design</li>
+            <li class="flex gap-3"><span class="text-accent-primary" aria-hidden="true">&#10003;</span> SEO optimised</li>
+            <li class="flex gap-3"><span class="text-accent-primary" aria-hidden="true">&#10003;</span> 3 rounds of revisions</li>
           </ul>
-          <a href="/services" class="btn-primary w-full">Learn More</a>
+          <a href="/services" class="btn-primary w-full"><span>Learn More</span></a>
         </div>
 
         <!-- Premium -->
-        <div class="card reveal text-center">
+        <div class="card reveal text-center p-8">
           <h3 class="text-accent-secondary mb-2">Premium</h3>
-          <p class="font-heading font-bold text-4xl text-txt-primary mb-1">£749</p>
-          <p class="text-txt-tertiary text-sm mb-6">One-off payment</p>
+          <p class="font-heading font-bold text-5xl text-txt-primary mb-1">£749</p>
+          <p class="text-txt-tertiary text-sm mb-8">One-off payment</p>
           <ul class="text-left space-y-3 mb-8 text-txt-secondary text-sm">
-            <li class="flex gap-2"><span class="text-accent-primary" aria-hidden="true">&#10003;</span> Unlimited pages</li>
-            <li class="flex gap-2"><span class="text-accent-primary" aria-hidden="true">&#10003;</span> Advanced animations</li>
-            <li class="flex gap-2"><span class="text-accent-primary" aria-hidden="true">&#10003;</span> Priority support</li>
-            <li class="flex gap-2"><span class="text-accent-primary" aria-hidden="true">&#10003;</span> Unlimited revisions</li>
+            <li class="flex gap-3"><span class="text-accent-primary" aria-hidden="true">&#10003;</span> Unlimited pages</li>
+            <li class="flex gap-3"><span class="text-accent-primary" aria-hidden="true">&#10003;</span> Advanced animations</li>
+            <li class="flex gap-3"><span class="text-accent-primary" aria-hidden="true">&#10003;</span> Priority support</li>
+            <li class="flex gap-3"><span class="text-accent-primary" aria-hidden="true">&#10003;</span> Unlimited revisions</li>
           </ul>
           <a href="/services" class="btn-secondary w-full">Learn More</a>
         </div>
@@ -95,52 +116,59 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
+  <div class="glow-line" aria-hidden="true"></div>
+
   <!-- Portfolio Preview -->
-  <section class="section-padding bg-bg-secondary">
-    <div class="container">
-      <div class="text-center mb-16">
-        <h2 class="reveal mb-4">Our <span class="text-accent-primary">work</span></h2>
+  <section class="section-padding relative overflow-hidden" style="background: rgba(12, 12, 20, 0.5);">
+    <div class="absolute inset-0 dot-pattern opacity-20" aria-hidden="true"></div>
+    <div class="container relative z-10">
+      <div class="text-center mb-20">
+        <span class="reveal inline-block px-4 py-1.5 text-xs font-mono tracking-wider text-accent-tertiary border border-accent-tertiary/30 rounded-full bg-accent-tertiary/5 mb-6">
+          PORTFOLIO
+        </span>
+        <h2 class="reveal mb-4">Our <span class="gradient-text-subtle">work</span></h2>
         <p class="reveal text-txt-secondary text-lg max-w-xl mx-auto">
           Real websites we've built for real businesses.
         </p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 stagger">
-        <div class="card reveal overflow-hidden group">
-          <div class="aspect-video bg-surface rounded mb-4 flex items-center justify-center">
-            <span class="text-txt-tertiary text-sm font-mono">Project Screenshot</span>
+        {[
+          { name: 'The Local Barber', desc: 'Modern booking site for a high-street barbershop.' },
+          { name: 'GreenLeaf Landscaping', desc: 'Portfolio site showcasing garden transformations.' },
+          { name: 'Peak Fitness PT', desc: 'Landing page with class schedules and enquiry form.' },
+        ].map((project) => (
+          <div class="card reveal overflow-hidden group p-0">
+            <div class="aspect-video bg-gradient-to-br from-accent-primary/10 via-surface to-accent-secondary/10 flex items-center justify-center relative overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-t from-bg-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <span class="text-txt-tertiary text-sm font-mono">Project Screenshot</span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg mb-1 group-hover:text-accent-primary transition-colors duration-300">{project.name}</h3>
+              <p class="text-txt-secondary text-sm">{project.desc}</p>
+            </div>
           </div>
-          <h3 class="text-lg mb-1">The Local Barber</h3>
-          <p class="text-txt-secondary text-sm">Modern booking site for a high-street barbershop.</p>
-        </div>
-        <div class="card reveal overflow-hidden group">
-          <div class="aspect-video bg-surface rounded mb-4 flex items-center justify-center">
-            <span class="text-txt-tertiary text-sm font-mono">Project Screenshot</span>
-          </div>
-          <h3 class="text-lg mb-1">GreenLeaf Landscaping</h3>
-          <p class="text-txt-secondary text-sm">Portfolio site showcasing garden transformations.</p>
-        </div>
-        <div class="card reveal overflow-hidden group">
-          <div class="aspect-video bg-surface rounded mb-4 flex items-center justify-center">
-            <span class="text-txt-tertiary text-sm font-mono">Project Screenshot</span>
-          </div>
-          <h3 class="text-lg mb-1">Peak Fitness PT</h3>
-          <p class="text-txt-secondary text-sm">Landing page with class schedules and enquiry form.</p>
-        </div>
+        ))}
       </div>
-      <div class="text-center mt-10 reveal">
+      <div class="text-center mt-12 reveal">
         <a href="/portfolio" class="btn-secondary">View All Projects</a>
       </div>
     </div>
   </section>
 
+  <div class="glow-line" aria-hidden="true"></div>
+
   <!-- Process Teaser -->
-  <section class="section-padding">
-    <div class="container text-center">
-      <h2 class="reveal mb-4">How we <span class="text-accent-primary">work</span></h2>
-      <p class="reveal text-txt-secondary text-lg max-w-xl mx-auto mb-12">
+  <section class="section-padding relative overflow-hidden">
+    <div class="orb w-[400px] h-[400px] -left-48 top-1/3 bg-accent-secondary/5 animate-pulse-glow" aria-hidden="true"></div>
+    <div class="container relative z-10 text-center">
+      <span class="reveal inline-block px-4 py-1.5 text-xs font-mono tracking-wider text-accent-primary border border-accent-primary/30 rounded-full bg-accent-primary/5 mb-6">
+        OUR PROCESS
+      </span>
+      <h2 class="reveal mb-4">How we <span class="gradient-text-subtle">work</span></h2>
+      <p class="reveal text-txt-secondary text-lg max-w-xl mx-auto mb-16">
         From first chat to live site — six simple steps.
       </p>
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 stagger mb-10">
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 stagger mb-12">
         {[
           { num: '01', title: 'Discovery Call' },
           { num: '02', title: 'Custom Quote' },
@@ -149,8 +177,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           { num: '05', title: 'Review' },
           { num: '06', title: 'Launch' },
         ].map((step) => (
-          <div class="reveal text-center">
-            <span class="block font-heading font-bold text-3xl text-accent-primary mb-2">{step.num}</span>
+          <div class="reveal text-center group">
+            <div class="w-16 h-16 mx-auto mb-4 rounded-2xl flex items-center justify-center transition-all duration-500 group-hover:scale-110" style="background: linear-gradient(135deg, rgba(124, 58, 237, 0.15), rgba(6, 182, 212, 0.15)); border: 1px solid rgba(124, 58, 237, 0.2);">
+              <span class="font-heading font-bold text-lg gradient-text">{step.num}</span>
+            </div>
             <span class="text-txt-secondary text-sm">{step.title}</span>
           </div>
         ))}
@@ -161,15 +191,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
+  <div class="glow-line" aria-hidden="true"></div>
+
   <!-- Final CTA -->
-  <section class="section-padding bg-gradient-to-br from-accent-primary/10 via-bg-secondary to-accent-secondary/10">
-    <div class="container text-center">
-      <h2 class="reveal mb-4">Ready to get <span class="text-accent-primary">started</span>?</h2>
-      <p class="reveal text-txt-secondary text-lg max-w-lg mx-auto mb-8">
+  <section class="section-padding relative overflow-hidden" style="background: rgba(12, 12, 20, 0.5);">
+    <div class="orb w-[500px] h-[500px] top-0 left-1/2 -translate-x-1/2 bg-accent-primary/8 animate-pulse-glow" aria-hidden="true"></div>
+    <div class="absolute inset-0 dot-pattern opacity-15" aria-hidden="true"></div>
+    <div class="container relative z-10 text-center">
+      <h2 class="reveal mb-4">Ready to get <span class="gradient-text">started</span>?</h2>
+      <p class="reveal text-txt-secondary text-lg max-w-lg mx-auto mb-10">
         Tell us about your project and we'll get back to you within 24 hours.
       </p>
       <div class="reveal">
-        <a href="/contact" class="btn-primary text-lg px-8 py-4">Get in Touch</a>
+        <a href="/contact" class="btn-primary text-lg px-10 py-5"><span>Get in Touch</span></a>
       </div>
     </div>
   </section>
@@ -187,8 +221,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       if (!ctx) return;
 
       let animationId: number;
+      let mouseX = 0;
+      let mouseY = 0;
       let particles: Array<{
-        x: number; y: number; vx: number; vy: number; size: number; opacity: number; color: string;
+        x: number; y: number; vx: number; vy: number; size: number; opacity: number; color: string; baseOpacity: number;
       }> = [];
 
       function resize() {
@@ -197,25 +233,43 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       }
 
       function createParticles() {
-        const count = Math.min(60, Math.floor(window.innerWidth / 20));
+        const count = Math.min(80, Math.floor(window.innerWidth / 16));
         particles = [];
         for (let i = 0; i < count; i++) {
+          const baseOpacity = Math.random() * 0.4 + 0.1;
           particles.push({
             x: Math.random() * canvas!.width,
             y: Math.random() * canvas!.height,
-            vx: (Math.random() - 0.5) * 0.3,
-            vy: (Math.random() - 0.5) * 0.3,
-            size: Math.random() * 2 + 0.5,
-            opacity: Math.random() * 0.3 + 0.05,
-            color: Math.random() > 0.5 ? '45, 122, 110' : '209, 139, 58',
+            vx: (Math.random() - 0.5) * 0.4,
+            vy: (Math.random() - 0.5) * 0.4,
+            size: Math.random() * 2.5 + 0.5,
+            opacity: baseOpacity,
+            baseOpacity,
+            color: ['124, 58, 237', '6, 182, 212', '236, 72, 153'][Math.floor(Math.random() * 3)],
           });
         }
       }
+
+      canvas.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+      });
 
       function draw() {
         ctx!.clearRect(0, 0, canvas!.width, canvas!.height);
 
         for (const p of particles) {
+          // Mouse interaction — glow brighter near cursor
+          const dx = mouseX - p.x;
+          const dy = mouseY - p.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 200) {
+            p.opacity = p.baseOpacity + (1 - dist / 200) * 0.5;
+            p.size = p.size < 4 ? p.size + 0.02 : p.size;
+          } else {
+            p.opacity += (p.baseOpacity - p.opacity) * 0.02;
+          }
+
           p.x += p.vx;
           p.y += p.vy;
 
@@ -230,17 +284,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           ctx!.fill();
         }
 
-        // Draw connections
+        // Draw connections with gradient colors
         for (let i = 0; i < particles.length; i++) {
           for (let j = i + 1; j < particles.length; j++) {
             const dx = particles[i].x - particles[j].x;
             const dy = particles[i].y - particles[j].y;
             const dist = Math.sqrt(dx * dx + dy * dy);
-            if (dist < 150) {
+            if (dist < 160) {
+              const alpha = 0.08 * (1 - dist / 160);
               ctx!.beginPath();
               ctx!.moveTo(particles[i].x, particles[i].y);
               ctx!.lineTo(particles[j].x, particles[j].y);
-              ctx!.strokeStyle = `rgba(45, 122, 110, ${0.06 * (1 - dist / 150)})`;
+              ctx!.strokeStyle = `rgba(124, 58, 237, ${alpha})`;
               ctx!.lineWidth = 0.5;
               ctx!.stroke();
             }
@@ -259,7 +314,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         createParticles();
       });
 
-      // Cleanup on page navigation
       document.addEventListener('astro:before-preparation', () => {
         cancelAnimationFrame(animationId);
       }, { once: true });

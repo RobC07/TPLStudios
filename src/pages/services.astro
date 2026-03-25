@@ -7,9 +7,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   description="Transparent pricing for professional web design. No hidden fees, no surprises. See our Starter, Growth, and Premium tiers."
 >
   <!-- Page Header -->
-  <section class="section-padding pt-32 md:pt-40">
-    <div class="container text-center">
-      <h1 class="reveal mb-4">Services & <span class="text-accent-primary">Pricing</span></h1>
+  <section class="section-padding pt-32 md:pt-40 relative overflow-hidden">
+    <div class="orb w-[500px] h-[500px] -top-32 right-0 bg-accent-primary/8 animate-float-slow" aria-hidden="true"></div>
+    <div class="absolute inset-0 dot-pattern opacity-20" aria-hidden="true"></div>
+    <div class="container relative z-10 text-center">
+      <span class="reveal inline-block px-4 py-1.5 text-xs font-mono tracking-wider text-accent-primary border border-accent-primary/30 rounded-full bg-accent-primary/5 mb-6">
+        SERVICES & PRICING
+      </span>
+      <h1 class="reveal mb-4">Services & <span class="gradient-text">Pricing</span></h1>
       <p class="reveal text-txt-secondary text-lg md:text-xl max-w-2xl mx-auto">
         No hidden fees. No surprises. Just clear, honest pricing.
       </p>
@@ -17,7 +22,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </section>
 
   <!-- Pricing Tiers -->
-  <section class="section-padding pt-8">
+  <section class="section-padding pt-8 relative">
     <div class="container">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 stagger">
         <!-- Starter -->
@@ -38,11 +43,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </div>
 
         <!-- Growth (highlighted) -->
-        <div class="card reveal p-8 border-accent-primary relative scale-[1.02]">
-          <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent-primary text-white text-xs font-heading font-semibold px-4 py-1 rounded-full">
+        <div class="card-featured reveal p-8 relative">
+          <span class="absolute -top-3 left-1/2 -translate-x-1/2 z-10 text-xs font-heading font-semibold px-4 py-1 rounded-full text-white" style="background: linear-gradient(135deg, #7C3AED, #06B6D4);">
             Most Popular
           </span>
-          <h3 class="text-accent-primary mb-2">Growth</h3>
+          <h3 class="gradient-text-subtle mb-2">Growth</h3>
           <p class="text-txt-secondary text-sm mb-4">For businesses ready to grow online.</p>
           <p class="font-heading font-bold text-5xl text-txt-primary mb-1">£499</p>
           <p class="text-txt-tertiary text-sm mb-8">One-off payment</p>
@@ -55,7 +60,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <li class="flex gap-3"><span class="text-accent-primary shrink-0" aria-hidden="true">&#10003;</span> 3 rounds of revisions</li>
             <li class="flex gap-3"><span class="text-accent-primary shrink-0" aria-hidden="true">&#10003;</span> 14-day delivery</li>
           </ul>
-          <a href="/contact" class="btn-primary w-full">Get Started</a>
+          <a href="/contact" class="btn-primary w-full"><span>Get Started</span></a>
         </div>
 
         <!-- Premium -->
@@ -78,20 +83,26 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
+  <div class="glow-line" aria-hidden="true"></div>
+
   <!-- Hosting & Maintenance -->
-  <section class="section-padding bg-bg-secondary">
-    <div class="container">
+  <section class="section-padding relative overflow-hidden" style="background: rgba(12, 12, 20, 0.5);">
+    <div class="orb w-[400px] h-[400px] -left-32 top-0 bg-accent-secondary/5 animate-pulse-glow" aria-hidden="true"></div>
+    <div class="container relative z-10">
       <div class="max-w-3xl mx-auto text-center">
-        <h2 class="reveal mb-4">Hosting & <span class="text-accent-primary">Maintenance</span></h2>
-        <p class="reveal text-txt-secondary text-lg mb-8">
+        <span class="reveal inline-block px-4 py-1.5 text-xs font-mono tracking-wider text-accent-secondary border border-accent-secondary/30 rounded-full bg-accent-secondary/5 mb-6">
+          MONTHLY PLAN
+        </span>
+        <h2 class="reveal mb-4">Hosting & <span class="gradient-text-subtle">Maintenance</span></h2>
+        <p class="reveal text-txt-secondary text-lg mb-10">
           Keep your site fast, secure, and up to date with our monthly plan.
         </p>
       </div>
-      <div class="max-w-2xl mx-auto card reveal p-8">
-        <div class="text-center mb-6">
-          <p class="font-heading font-bold text-3xl text-txt-primary">£75<span class="text-txt-tertiary text-lg font-normal">/month</span></p>
+      <div class="max-w-2xl mx-auto card-featured reveal p-8">
+        <div class="text-center mb-8">
+          <p class="font-heading font-bold text-4xl text-txt-primary">£75<span class="text-txt-tertiary text-lg font-normal">/month</span></p>
         </div>
-        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-txt-secondary text-sm">
+        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-txt-secondary text-sm">
           <li class="flex gap-3"><span class="text-accent-primary shrink-0" aria-hidden="true">&#10003;</span> Fast, reliable hosting</li>
           <li class="flex gap-3"><span class="text-accent-primary shrink-0" aria-hidden="true">&#10003;</span> SSL certificate included</li>
           <li class="flex gap-3"><span class="text-accent-primary shrink-0" aria-hidden="true">&#10003;</span> Monthly backups</li>
@@ -104,10 +115,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
+  <div class="glow-line" aria-hidden="true"></div>
+
   <!-- FAQ -->
-  <section class="section-padding">
-    <div class="container max-w-3xl">
-      <h2 class="reveal text-center mb-12">Frequently asked <span class="text-accent-primary">questions</span></h2>
+  <section class="section-padding relative">
+    <div class="container max-w-3xl relative z-10">
+      <div class="text-center mb-16">
+        <span class="reveal inline-block px-4 py-1.5 text-xs font-mono tracking-wider text-accent-tertiary border border-accent-tertiary/30 rounded-full bg-accent-tertiary/5 mb-6">
+          FAQ
+        </span>
+        <h2 class="reveal">Frequently asked <span class="gradient-text-subtle">questions</span></h2>
+      </div>
       <div class="space-y-4 stagger">
         {[
           {
@@ -135,7 +153,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <summary class="flex items-center justify-between gap-4 font-heading font-semibold text-txt-primary list-none [&::-webkit-details-marker]:hidden">
               {faq.q}
               <svg
-                class="w-5 h-5 shrink-0 text-txt-tertiary transition-transform duration-200 group-open:rotate-180"
+                class="w-5 h-5 shrink-0 text-accent-primary transition-transform duration-300 group-open:rotate-180"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -151,15 +169,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
+  <div class="glow-line" aria-hidden="true"></div>
+
   <!-- CTA -->
-  <section class="section-padding bg-gradient-to-br from-accent-primary/10 via-bg-secondary to-accent-secondary/10">
-    <div class="container text-center">
-      <h2 class="reveal mb-4">Know what you <span class="text-accent-primary">need</span>?</h2>
-      <p class="reveal text-txt-secondary text-lg max-w-lg mx-auto mb-8">
+  <section class="section-padding relative overflow-hidden" style="background: rgba(12, 12, 20, 0.5);">
+    <div class="orb w-[500px] h-[500px] top-0 left-1/2 -translate-x-1/2 bg-accent-primary/8 animate-pulse-glow" aria-hidden="true"></div>
+    <div class="absolute inset-0 dot-pattern opacity-15" aria-hidden="true"></div>
+    <div class="container relative z-10 text-center">
+      <h2 class="reveal mb-4">Know what you <span class="gradient-text">need</span>?</h2>
+      <p class="reveal text-txt-secondary text-lg max-w-lg mx-auto mb-10">
         Get in touch and we'll put together a quote within 24 hours.
       </p>
       <div class="reveal">
-        <a href="/contact" class="btn-primary text-lg px-8 py-4">Get a Free Quote</a>
+        <a href="/contact" class="btn-primary text-lg px-10 py-5"><span>Get a Free Quote</span></a>
       </div>
     </div>
   </section>

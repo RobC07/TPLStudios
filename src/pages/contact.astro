@@ -7,9 +7,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   description="Tell us about your project and we'll get back to you within 24 hours. Free quotes for UK small businesses."
 >
   <!-- Page Header -->
-  <section class="section-padding pt-32 md:pt-40">
-    <div class="container text-center">
-      <h1 class="reveal mb-4">Let's <span class="text-accent-primary">Talk</span></h1>
+  <section class="section-padding pt-32 md:pt-40 relative overflow-hidden">
+    <div class="orb w-[500px] h-[500px] -top-32 -right-32 bg-accent-primary/8 animate-float-slow" aria-hidden="true"></div>
+    <div class="absolute inset-0 dot-pattern opacity-20" aria-hidden="true"></div>
+    <div class="container relative z-10 text-center">
+      <span class="reveal inline-block px-4 py-1.5 text-xs font-mono tracking-wider text-accent-primary border border-accent-primary/30 rounded-full bg-accent-primary/5 mb-6">
+        GET IN TOUCH
+      </span>
+      <h1 class="reveal mb-4">Let's <span class="gradient-text">Talk</span></h1>
       <p class="reveal text-txt-secondary text-lg md:text-xl max-w-2xl mx-auto">
         Tell us about your project and we'll get back to you within 24 hours.
       </p>
@@ -24,7 +29,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="lg:col-span-2">
           <form
             id="contact-form"
-            class="card reveal p-6 md:p-8 space-y-6"
+            class="card-featured reveal p-6 md:p-8 space-y-6"
             action="https://formspree.io/f/placeholder"
             method="POST"
             novalidate
@@ -39,14 +44,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               <!-- Full Name -->
               <div>
                 <label for="name" class="block text-sm font-medium text-txt-primary mb-2">
-                  Full Name <span class="text-error" aria-label="required">*</span>
+                  Full Name <span class="text-accent-tertiary" aria-label="required">*</span>
                 </label>
                 <input
                   type="text"
                   id="name"
                   name="name"
                   required
-                  class="w-full bg-surface border border-border rounded-input px-4 py-3 text-txt-primary text-sm placeholder:text-txt-tertiary focus:border-accent-primary focus:outline-none transition-colors duration-200"
+                  class="w-full border rounded-input px-4 py-3 text-txt-primary text-sm placeholder:text-txt-tertiary focus:outline-none transition-all duration-300"
+                  style="background: rgba(26, 26, 46, 0.6); border-color: rgba(124, 58, 237, 0.15);"
+                  onfocus="this.style.borderColor='rgba(124, 58, 237, 0.5)'; this.style.boxShadow='0 0 15px rgba(124, 58, 237, 0.1)';"
+                  onblur="this.style.borderColor='rgba(124, 58, 237, 0.15)'; this.style.boxShadow='none';"
                   placeholder="John Smith"
                 />
                 <p class="text-error text-xs mt-1 hidden" id="name-error">Please enter your name.</p>
@@ -55,14 +63,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               <!-- Email -->
               <div>
                 <label for="email" class="block text-sm font-medium text-txt-primary mb-2">
-                  Email Address <span class="text-error" aria-label="required">*</span>
+                  Email Address <span class="text-accent-tertiary" aria-label="required">*</span>
                 </label>
                 <input
                   type="email"
                   id="email"
                   name="email"
                   required
-                  class="w-full bg-surface border border-border rounded-input px-4 py-3 text-txt-primary text-sm placeholder:text-txt-tertiary focus:border-accent-primary focus:outline-none transition-colors duration-200"
+                  class="w-full border rounded-input px-4 py-3 text-txt-primary text-sm placeholder:text-txt-tertiary focus:outline-none transition-all duration-300"
+                  style="background: rgba(26, 26, 46, 0.6); border-color: rgba(124, 58, 237, 0.15);"
+                  onfocus="this.style.borderColor='rgba(124, 58, 237, 0.5)'; this.style.boxShadow='0 0 15px rgba(124, 58, 237, 0.1)';"
+                  onblur="this.style.borderColor='rgba(124, 58, 237, 0.15)'; this.style.boxShadow='none';"
                   placeholder="john@example.com"
                 />
                 <p class="text-error text-xs mt-1 hidden" id="email-error">Please enter a valid email address.</p>
@@ -79,7 +90,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                   type="tel"
                   id="phone"
                   name="phone"
-                  class="w-full bg-surface border border-border rounded-input px-4 py-3 text-txt-primary text-sm placeholder:text-txt-tertiary focus:border-accent-primary focus:outline-none transition-colors duration-200"
+                  class="w-full border rounded-input px-4 py-3 text-txt-primary text-sm placeholder:text-txt-tertiary focus:outline-none transition-all duration-300"
+                  style="background: rgba(26, 26, 46, 0.6); border-color: rgba(124, 58, 237, 0.15);"
+                  onfocus="this.style.borderColor='rgba(124, 58, 237, 0.5)'; this.style.boxShadow='0 0 15px rgba(124, 58, 237, 0.1)';"
+                  onblur="this.style.borderColor='rgba(124, 58, 237, 0.15)'; this.style.boxShadow='none';"
                   placeholder="07123 456789"
                 />
               </div>
@@ -93,7 +107,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                   type="text"
                   id="business"
                   name="business"
-                  class="w-full bg-surface border border-border rounded-input px-4 py-3 text-txt-primary text-sm placeholder:text-txt-tertiary focus:border-accent-primary focus:outline-none transition-colors duration-200"
+                  class="w-full border rounded-input px-4 py-3 text-txt-primary text-sm placeholder:text-txt-tertiary focus:outline-none transition-all duration-300"
+                  style="background: rgba(26, 26, 46, 0.6); border-color: rgba(124, 58, 237, 0.15);"
+                  onfocus="this.style.borderColor='rgba(124, 58, 237, 0.5)'; this.style.boxShadow='0 0 15px rgba(124, 58, 237, 0.1)';"
+                  onblur="this.style.borderColor='rgba(124, 58, 237, 0.15)'; this.style.boxShadow='none';"
                   placeholder="Your Business Ltd"
                 />
               </div>
@@ -102,31 +119,34 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <!-- Project Details -->
             <div>
               <label for="details" class="block text-sm font-medium text-txt-primary mb-2">
-                Project Details <span class="text-error" aria-label="required">*</span>
+                Project Details <span class="text-accent-tertiary" aria-label="required">*</span>
               </label>
               <textarea
                 id="details"
                 name="message"
                 required
                 rows="5"
-                class="w-full bg-surface border border-border rounded-input px-4 py-3 text-txt-primary text-sm placeholder:text-txt-tertiary focus:border-accent-primary focus:outline-none transition-colors duration-200 resize-y"
-                placeholder="Tell us a bit about your business and what you're looking for…"
+                class="w-full border rounded-input px-4 py-3 text-txt-primary text-sm placeholder:text-txt-tertiary focus:outline-none transition-all duration-300 resize-y"
+                style="background: rgba(26, 26, 46, 0.6); border-color: rgba(124, 58, 237, 0.15);"
+                onfocus="this.style.borderColor='rgba(124, 58, 237, 0.5)'; this.style.boxShadow='0 0 15px rgba(124, 58, 237, 0.1)';"
+                onblur="this.style.borderColor='rgba(124, 58, 237, 0.15)'; this.style.boxShadow='none';"
+                placeholder="Tell us a bit about your business and what you're looking for..."
               ></textarea>
               <p class="text-error text-xs mt-1 hidden" id="details-error">Please tell us about your project.</p>
             </div>
 
             <!-- Submit -->
             <button type="submit" class="btn-primary w-full sm:w-auto" id="submit-btn">
-              Send Enquiry
+              <span>Send Enquiry</span>
             </button>
 
             <!-- Success message -->
-            <div id="form-success" class="hidden p-4 bg-success/10 border border-success/30 rounded-card">
+            <div id="form-success" class="hidden p-4 rounded-card" style="background: rgba(34, 197, 94, 0.1); border: 1px solid rgba(34, 197, 94, 0.3);">
               <p class="text-success font-medium text-sm">Thanks! We'll be in touch within 24 hours.</p>
             </div>
 
             <!-- Error message -->
-            <div id="form-error" class="hidden p-4 bg-error/10 border border-error/30 rounded-card">
+            <div id="form-error" class="hidden p-4 rounded-card" style="background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.3);">
               <p class="text-error font-medium text-sm">Something went wrong. Please try again or email us directly.</p>
             </div>
           </form>
@@ -142,7 +162,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                 <p class="text-txt-tertiary text-xs uppercase tracking-wider mb-1">Email</p>
                 <a
                   href="mailto:info@tplstudios.com"
-                  class="text-accent-primary hover:text-accent-primary-hover transition-colors duration-200 text-sm"
+                  class="text-accent-primary hover:text-accent-secondary transition-colors duration-300 text-sm"
                 >
                   info@tplstudios.com
                 </a>
@@ -160,7 +180,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                     href="https://instagram.com/tplstudios"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="text-txt-secondary hover:text-accent-primary transition-colors duration-200"
+                    class="text-txt-tertiary hover:text-accent-primary transition-colors duration-300"
                     aria-label="Follow us on Instagram"
                   >
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -171,7 +191,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                     href="https://linkedin.com/company/tplstudios"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="text-txt-secondary hover:text-accent-primary transition-colors duration-200"
+                    class="text-txt-tertiary hover:text-accent-primary transition-colors duration-300"
                     aria-label="Follow us on LinkedIn"
                   >
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -201,17 +221,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         const errEl = document.getElementById(`${fieldId}-error`);
         const input = document.getElementById(fieldId) as HTMLInputElement | null;
         if (errEl) errEl.classList.remove('hidden');
-        if (input) input.classList.add('border-error');
+        if (input) input.style.borderColor = 'rgba(239, 68, 68, 0.5)';
       }
 
       function clearError(fieldId: string) {
         const errEl = document.getElementById(`${fieldId}-error`);
         const input = document.getElementById(fieldId) as HTMLInputElement | null;
         if (errEl) errEl.classList.add('hidden');
-        if (input) input.classList.remove('border-error');
+        if (input) input.style.borderColor = 'rgba(124, 58, 237, 0.15)';
       }
 
-      // Clear errors on input
       ['name', 'email', 'details'].forEach((id) => {
         const el = document.getElementById(id);
         if (el) {
@@ -223,22 +242,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         e.preventDefault();
         let valid = true;
 
-        // Validate name
         const name = (document.getElementById('name') as HTMLInputElement).value.trim();
         if (!name) { showError('name'); valid = false; } else { clearError('name'); }
 
-        // Validate email
         const email = (document.getElementById('email') as HTMLInputElement).value.trim();
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!email || !emailRegex.test(email)) { showError('email'); valid = false; } else { clearError('email'); }
 
-        // Validate details
         const details = (document.getElementById('details') as HTMLTextAreaElement).value.trim();
         if (!details) { showError('details'); valid = false; } else { clearError('details'); }
 
         if (!valid) return;
 
-        // Submit
         if (submitBtn) submitBtn.textContent = 'Sending...';
         successMsg?.classList.add('hidden');
         errorMsg?.classList.add('hidden');

@@ -10,14 +10,14 @@ const currentPath = Astro.url.pathname;
 ---
 
 <header
-  class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+  class="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
   id="site-header"
 >
   <div class="container flex items-center justify-between h-16 md:h-20">
     <!-- Logo -->
-    <a href="/" class="flex items-baseline gap-1 group" aria-label="TPL Studios home">
-      <span class="font-heading font-bold text-xl text-txt-primary tracking-tight">TPL</span>
-      <span class="font-heading font-semibold text-sm text-accent-primary tracking-wide">STUDIOS</span>
+    <a href="/" class="flex items-baseline gap-1.5 group" aria-label="TPL Studios home">
+      <span class="font-heading font-bold text-xl tracking-tight gradient-text">TPL</span>
+      <span class="font-heading font-semibold text-xs text-txt-secondary tracking-[0.2em] uppercase group-hover:text-txt-primary transition-colors duration-300">Studios</span>
     </a>
 
     <!-- Desktop Nav -->
@@ -26,8 +26,9 @@ const currentPath = Astro.url.pathname;
         <a
           href={link.href}
           class:list={[
-            'font-body font-medium text-[15px] transition-colors duration-200 relative',
-            'after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:bg-accent-primary after:transition-all after:duration-200',
+            'font-body font-medium text-[15px] transition-all duration-300 relative',
+            'after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:transition-all after:duration-300',
+            'after:bg-gradient-to-r after:from-accent-primary after:to-accent-secondary',
             currentPath === link.href
               ? 'text-txt-primary after:w-full'
               : 'text-txt-secondary hover:text-txt-primary after:w-0 hover:after:w-full',
@@ -36,7 +37,7 @@ const currentPath = Astro.url.pathname;
           {link.label}
         </a>
       ))}
-      <a href="/contact" class="btn-primary text-[15px] px-5 py-2">Contact</a>
+      <a href="/contact" class="btn-primary text-[14px] px-5 py-2.5"><span>Contact</span></a>
     </nav>
 
     <!-- Mobile Hamburger -->
@@ -56,21 +57,22 @@ const currentPath = Astro.url.pathname;
   <!-- Mobile Menu -->
   <div
     id="mobile-menu"
-    class="md:hidden fixed inset-0 top-16 bg-bg-primary/98 backdrop-blur-md z-40 flex flex-col items-center justify-center gap-8 transition-all duration-300 opacity-0 pointer-events-none"
+    class="md:hidden fixed inset-0 top-16 z-40 flex flex-col items-center justify-center gap-8 transition-all duration-300 opacity-0 pointer-events-none"
+    style="background: rgba(5, 5, 8, 0.97); backdrop-filter: blur(20px);"
     aria-hidden="true"
   >
     {navLinks.map((link) => (
       <a
         href={link.href}
         class:list={[
-          'font-heading text-2xl font-semibold transition-colors duration-200',
-          currentPath === link.href ? 'text-accent-primary' : 'text-txt-primary hover:text-accent-primary',
+          'font-heading text-2xl font-semibold transition-colors duration-300',
+          currentPath === link.href ? 'gradient-text' : 'text-txt-primary hover:text-accent-primary',
         ]}
       >
         {link.label}
       </a>
     ))}
-    <a href="/contact" class="btn-primary text-lg px-8 py-3">Contact</a>
+    <a href="/contact" class="btn-primary text-lg px-8 py-3"><span>Contact</span></a>
   </div>
 </header>
 
@@ -87,19 +89,21 @@ const currentPath = Astro.url.pathname;
 
     let isOpen = false;
 
-    // Sticky header background
     function updateHeader() {
       if (window.scrollY > 40) {
-        header.classList.add('bg-bg-primary/95', 'backdrop-blur-md', 'border-b', 'border-border');
+        header.style.background = 'rgba(5, 5, 8, 0.85)';
+        header.style.backdropFilter = 'blur(20px)';
+        header.style.borderBottom = '1px solid rgba(124, 58, 237, 0.1)';
       } else {
-        header.classList.remove('bg-bg-primary/95', 'backdrop-blur-md', 'border-b', 'border-border');
+        header.style.background = 'transparent';
+        header.style.backdropFilter = 'none';
+        header.style.borderBottom = '1px solid transparent';
       }
     }
 
     window.addEventListener('scroll', updateHeader, { passive: true });
     updateHeader();
 
-    // Mobile menu toggle
     toggle.addEventListener('click', () => {
       isOpen = !isOpen;
       toggle.setAttribute('aria-expanded', String(isOpen));
@@ -122,7 +126,6 @@ const currentPath = Astro.url.pathname;
       }
     });
 
-    // Close menu on link click
     menu.querySelectorAll('a').forEach((link) => {
       link.addEventListener('click', () => {
         if (isOpen) toggle.click();
